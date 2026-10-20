@@ -10,11 +10,13 @@ import {
   HardDrive,
 } from 'lucide-react';
 import { WindowsLogo, BrainBoardLogo } from './icons/BrainBoardLogo';
+import { useRelease } from '../context/ReleaseContext';
 import { APP_INFO } from '../data/content';
 
 const HERO_TABS = ['Inicio', 'Recursos', 'DEV / AI'];
 
 export function HeroSection() {
+  const release = useRelease();
   const [activeMockupTab, setActiveMockupTab] = useState('DEV / AI');
 
   return (
@@ -61,7 +63,7 @@ export function HeroSection() {
             <WindowsLogo className="w-4 h-4 shrink-0" />
             <span>Descargar Brain Board para Windows (64-bit)</span>
             <span className="ml-1 px-2 py-0.5 text-xs rounded-full bg-white/20 text-white font-medium">
-              {APP_INFO.version}
+              {release.version}
             </span>
           </a>
 
@@ -78,7 +80,7 @@ export function HeroSection() {
         <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-[var(--text-subtle)]">
           <span className="inline-flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#22c55e]" />
-            Instalador directo ({APP_INFO.size})
+            Instalador directo ({release.size})
           </span>
           <span>•</span>
           <span>{APP_INFO.os}</span>

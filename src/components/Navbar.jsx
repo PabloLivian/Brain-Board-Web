@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X, Download } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useRelease } from '../context/ReleaseContext';
 import { BrainBoardLogo, WindowsLogo } from './icons/BrainBoardLogo';
 import { APP_INFO, NAV_LINKS } from '../data/content';
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const release = useRelease();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -77,7 +79,7 @@ export function Navbar() {
           <span className="font-bold text-[17px] tracking-tight text-[var(--text-main)]">
             {APP_INFO.name}
           </span>
-          <span className="badge-version">{APP_INFO.version}</span>
+          <span className="badge-version">{release.version}</span>
         </a>
 
         {/* Centro: Enlaces de ancla suaves con estado activo reactivo */}
@@ -194,7 +196,7 @@ export function Navbar() {
               className="btn-primary w-full justify-center"
             >
               <Download className="w-4 h-4" />
-              <span>Descargar para Windows ({APP_INFO.version})</span>
+              <span>Descargar para Windows ({release.version})</span>
             </a>
           </div>
         </div>

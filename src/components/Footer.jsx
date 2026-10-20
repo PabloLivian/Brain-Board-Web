@@ -1,10 +1,12 @@
 import { Sun, Moon, Download, Scale, UserCheck } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useRelease } from '../context/ReleaseContext';
 import { BrainBoardLogo } from './icons/BrainBoardLogo';
 import { APP_INFO, NAV_LINKS } from '../data/content';
 
 export function Footer() {
   const { theme, toggleTheme } = useTheme();
+  const release = useRelease();
 
   return (
     <footer className="bg-[var(--bg-surface)] border-t border-[var(--border-subtle)] transition-colors">
@@ -21,7 +23,7 @@ export function Footer() {
               <span className="font-bold text-base tracking-tight">
                 {APP_INFO.name}
               </span>
-              <span className="badge-version">{APP_INFO.version}</span>
+              <span className="badge-version">{release.version}</span>
             </a>
             <p className="text-xs text-[var(--text-subtle)] max-w-md m-0">
               Pizarra infinita de escritorio 100% local, privada y con sistema
@@ -68,7 +70,7 @@ export function Footer() {
               className="btn-primary !py-1.5 !px-3.5 !text-xs"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Descargar {APP_INFO.version}</span>
+              <span>Descargar {release.version}</span>
             </a>
           </div>
         </div>

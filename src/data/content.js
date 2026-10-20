@@ -13,15 +13,16 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.3',
-  installerName: 'Brain Board Setup 1.0.3.exe',
+  version: 'v1.0.4',
+  installerName: 'Brain-Board-Setup-1.0.4.exe',
   installerUrl: '#descarga',
-  directDownloadFile: '/downloads/Brain-Board-Setup-1.0.3.exe',
-  size: '68.4 MB',
+  directDownloadFile:
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.4/Brain-Board-Setup-1.0.4.exe',
+  size: '82.4 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
   license: 'Licencia MIT • 100% Local y Offline',
-  githubUrl: 'https://github.com',
+  githubUrl: 'https://github.com/PabloLivian/BrainBoard',
 };
 
 export const NAV_LINKS = [
@@ -147,9 +148,9 @@ export const FEATURES_LIST = [
   },
 ];
 
-export const CHANGELOG_V103 = [
+export const CHANGELOG_LATEST = [
+  'Motor Canvas 2D optimizado con renderizado selectivo de alto rendimiento.',
   'Soporte completo para importación y exportación de archivos .rtb con imágenes de alta resolución.',
   'Nuevo sistema de pestañas horizontales para alternar entre múltiples pizarras sin recargar.',
-  'Optimización del motor Canvas 2D con renderizado selectivo en tableros de más de 5.000 elementos.',
   'Conmutador nativo de Modo Oscuro (#0e1215) y Modo Claro (#f5f5f7) con guardado instantáneo.',
 ];
