@@ -13,12 +13,12 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.4',
-  installerName: 'Brain-Board-Setup-1.0.4.exe',
+  version: 'v1.0.5',
+  installerName: 'Brain-Board-Setup-1.0.5.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.4/Brain-Board-Setup-1.0.4.exe',
-  size: '82.4 MB',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.5/Brain-Board-Setup-1.0.5.exe',
+  size: '82.6 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
   license: 'Licencia MIT • 100% Local y Offline',
@@ -149,8 +149,10 @@ export const FEATURES_LIST = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Motor Canvas 2D optimizado con renderizado selectivo de alto rendimiento.',
-  'Soporte completo para importación y exportación de archivos .rtb con imágenes de alta resolución.',
-  'Nuevo sistema de pestañas horizontales para alternar entre múltiples pizarras sin recargar.',
-  'Conmutador nativo de Modo Oscuro (#0e1215) y Modo Claro (#f5f5f7) con guardado instantáneo.',
+  'Nuevo Cerebro IA "Brain" (Ctrl+K): conversa con tus tableros y usa las acciones rápidas Apunte, Añadir recurso, Briefing y Revisar apuntes obsoletos.',
+  'Autodetección de IA: usa Claude Code CLI o Gemini CLI si están instalados, o tu API Key de Claude, Gemini u OpenAI, u Ollama en local.',
+  'Añadir recurso: guarda webs, repositorios de GitHub, vídeos o posts de X como tarjeta compacta con una mini descripción debajo.',
+  'Fecha de colocación en cada elemento y Mapa de Frescura para ver de un vistazo qué es reciente y qué conviene revisar.',
+  'Exporta el tablero como imagen PNG / JPG y selecciona un área para copiar sus coordenadas.',
+  'Tablero de Ejemplo renovado con una guía paso a paso para empezar.',
 ];
