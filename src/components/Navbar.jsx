@@ -5,11 +5,11 @@ import { useRelease } from '../context/ReleaseContext';
 import { BrainBoardLogo, WindowsLogo } from './icons/BrainBoardLogo';
 import { APP_INFO, NAV_LINKS } from '../data/content';
 
-export function Navbar() {
+export function Navbar({ page = 'home' }) {
   const { theme, toggleTheme } = useTheme();
   const release = useRelease();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('inicio');
+  const [activeSection, setActiveSection] = useState(page === 'docs' ? 'documentacion' : 'inicio');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Detectar scroll para activar elevación y blur en la navbar
@@ -25,7 +25,7 @@ export function Navbar() {
   // Cerrar menú móvil automáticamente al pasar a escritorio
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setMobileMenuOpen(false);
       }
     };
@@ -33,8 +33,9 @@ export function Navbar() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // ScrollSpy reactivo para resaltar la sección visible actual
+  // ScrollSpy reactivo para resaltar la sección visible actual (solo en la portada)
   useEffect(() => {
+    if (page !== 'home') return;
     const sectionElements = NAV_LINKS.map((item) =>
       document.getElementById(item.id)
     ).filter(Boolean);
@@ -57,7 +58,7 @@ export function Navbar() {
 
     sectionElements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [page]);
 
   return (
     <header
@@ -70,7 +71,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Izquierda: Isotipo SVG + Logotipo tipográfico + Badge v1.0.3 */}
         <a
-          href="#inicio"
+          href="/#inicio"
           className="flex items-center gap-2.5 text-[var(--text-main)] no-underline group shrink-0"
         >
           <span className="text-[var(--primary)] transition-transform duration-200 group-hover:scale-105">
@@ -85,7 +86,7 @@ export function Navbar() {
         {/* Centro: Enlaces de ancla suaves con estado activo reactivo */}
         <nav
           aria-label="Navegación principal"
-          className="hidden md:flex items-center gap-1"
+          className="hidden lg:flex items-center gap-1"
         >
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.id;
@@ -106,7 +107,7 @@ export function Navbar() {
         </nav>
 
         {/* Derecha: Botón Toggle de Tema (38x38px) + Botón CTA Descargar */}
-        <div className="hidden md:flex items-center gap-2.5 shrink-0">
+        <div className="hidden lg:flex items-center gap-2.5 shrink-0">
           <button
             type="button"
             id="btn-theme-toggle"
@@ -126,14 +127,14 @@ export function Navbar() {
             )}
           </button>
 
-          <a href="#descarga" className="btn-primary !py-2 !px-4 !text-[14px]">
+          <a href="/#descarga" className="btn-primary !py-2 !px-4 !text-[14px]">
             <WindowsLogo className="w-3.5 h-3.5" />
             <span>Descargar</span>
           </a>
         </div>
 
         {/* Controles en Móvil: Toggle de Tema + Botón Menú */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-2">
           <button
             type="button"
             onClick={toggleTheme}
@@ -167,7 +168,7 @@ export function Navbar() {
 
       {/* Panel Desplegable Móvil */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[var(--bg-elevated)] border-t border-[var(--border-subtle)] px-4 pt-3 pb-5 space-y-1.5 shadow-[var(--shadow-md)]">
+        <div className="lg:hidden bg-[var(--bg-elevated)] border-t border-[var(--border-subtle)] px-4 pt-3 pb-5 space-y-1.5 shadow-[var(--shadow-md)]">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -191,7 +192,7 @@ export function Navbar() {
 
           <div className="pt-3 mt-2 border-t border-[var(--border-subtle)]">
             <a
-              href="#descarga"
+              href="/#descarga"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary w-full justify-center"
             >

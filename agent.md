@@ -67,7 +67,7 @@ La barra de navegación superior debe ser completamente reactiva y adaptable:
    - Fija en la parte superior (`sticky top-0 z-50`).
    - Detecta el desplazamiento vertical (`window.scrollY > 16`): cuando el usuario hace scroll, aplica fondo translúcido con desenfoque (`backdrop-blur-md`), borde inferior `1px solid var(--border-subtle)` y sombra sutil.
 2. **ScrollSpy (Detección de Sección Activa):**
-   - Utiliza `IntersectionObserver` para detectar qué sección está visible en pantalla (`#inicio`, `#capturas`, `#caracteristicas`, `#descarga`) y resalta automáticamente el enlace correspondiente en la barra de navegación con color `var(--primary)` o indicador activo.
+   - Utiliza `IntersectionObserver` para detectar qué sección está visible en pantalla (`#inicio`, `#funciones`, `#descarga`; en `/documentacion` se marca "Documentación") y resalta automáticamente el enlace correspondiente en la barra de navegación con color `var(--primary)` o indicador activo.
 3. **Identidad de Marca (Izquierda):**
    - Isotipo oficial SVG de Brain Board (`#3b82f6`) + texto **Brain Board** + Badge pill de versión (`v1.0.3`).
 4. **Acciones y Controles (Derecha):**
@@ -85,27 +85,15 @@ La barra de navegación superior debe ser completamente reactiva y adaptable:
   - **Secundario:** `Ver Capturas del Programa` / `Explorar en GitHub`.
 - **Vista Previa / Mockup Principal:** Ventana estilo aplicación de escritorio con barra de pestañas (`Inicio`, `Recursos`, `DEV / AI`) y fondo de cuadrícula de puntos (`radial-gradient`).
 
-### 4.3. Apartado de Capturas de Pantalla del Programa (`ScreenshotsSection.jsx`)
-Sección dedicada e interactiva (`id="capturas"`) para que el usuario explore visualmente el programa antes de descargarlo:
-1. **Navegación Interactiva por Vistas / Categorías:**
-   - Pestañas o controles reactivos para alternar entre distintas capturas clave del programa (por ejemplo: *Pizarra Infinita y Notas*, *Gestión de Tableros y Categorías*, *Importación de Archivos .RTB*, *Modo Oscuro y Claro*).
-2. **Marco de Ventana Fiel a la App (`.app-mockup-window`):**
-   - Cada captura se presenta dentro de un marco que simula la ventana nativa de Brain Board (con su barra de pestañas superior, bordes de `1px solid var(--border-card)` y sombra `--shadow-lg`).
-   - Incluye título y descripción contextual de lo que se muestra en la captura seleccionada.
-3. **Visor Lightbox (Zoom a Pantalla Completa):**
-   - Al hacer clic sobre una captura, se abre un modal elevado (`--bg-elevated` con overlay oscuro `backdrop-blur-sm`) para inspeccionar la captura en alta resolución.
-   - Soporta navegación entre capturas (botones Anterior/Siguiente y teclas `ArrowLeft`, `ArrowRight` y `Escape` para cerrar).
-4. **Gestión de Activos de Imagen:**
-   - Las capturas de pantalla se almacenan en `public/screenshots/`. Si una imagen aún no está disponible en disco, el componente debe renderizar un preview visual de alta fidelidad (canvas con notas adhesivas, conectores y paneles de Brain Board) para que la interfaz nunca se vea rota.
+### 4.3. Funciones HERO (`HeroFeatures.jsx`)
+- Sección `id="funciones"` de la portada: 6 tarjetas en 2 columnas, cada una con una captura real, título, una frase y enlace "Cómo funciona" a su apartado de la documentación. Datos en `HERO_FEATURES` (`src/data/content.js`).
+- Debajo, lo básico en una sola línea (`BASICS`) y un botón a la documentación. La portada debe seguir siendo ligera: lo detallado va en la documentación.
 
-### 4.4. Rejilla de Características (`FeaturesGrid.jsx`)
-- Grid responsivo (`1 col` en móvil, `2 cols` en tablet, `3 cols` en escritorio) con las 6 tarjetas definidas en [`GUIA_DISENO_WEB.md`](./GUIA_DISENO_WEB.md):
-  1. *100% Privado y Offline*
-  2. *Importación y Exportación RTB Completa*
-  3. *Motor Canvas 2D de Alto Rendimiento*
-  4. *Modo Oscuro Nativo Dual*
-  5. *Auto-guardado Inmediato*
-  6. *Búsqueda y Categorización Inteligente*
+### 4.4. Documentación (`DocsPage.jsx`, ruta `/documentacion`)
+- Página propia con índice lateral (en móvil, arriba) y secciones con capturas y explicación de todas las funciones. Contenido en `src/data/docs.js` (bloques `p`, `list`, `steps`, `shot`, `note`, `table`, `h3`; formato `**negrita**`, `` `código` `` y `{{Ctrl+K}}` para teclas).
+- `App.jsx` elige la página por la ruta; `vercel.json` reescribe `/documentacion` a `index.html`.
+- **Capturas:** `public/assets/capturas/<id>-light.webp` y `<id>-dark.webp`, siempre las dos. `ThemedShot.jsx` enseña la del tema activo y la amplía al pulsarla. Se generan con tableros de demostración (nunca con datos reales) mediante `node scripts/web_screenshots/generate.js --out <web>/public/assets/capturas` del repositorio de la app.
+- **Ser honestos:** no prometer "100% privado" sin matices. Los tableros se guardan en el equipo, pero el Cerebro IA envía datos al proveedor que se elija (salvo Ollama).
 
 ### 4.5. Sección de Descarga Directa y Requisitos (`DownloadSection.jsx`)
 - Tarjeta destacada central (`id="descarga"`) con borde suave y resplandor ambiental.
@@ -125,14 +113,15 @@ Sección dedicada e interactiva (`id="capturas"`) para que el usuario explore vi
 ```text
 Brain_Board_Web/
 ├── public/
-│   ├── screenshots/          # Capturas de pantalla reales del programa (.png / .webp)
-│   └── downloads/            # Instalador o redirección a GitHub Releases
+│   └── assets/capturas/      # Capturas del programa: <id>-light.webp y <id>-dark.webp
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx            # Navbar reactiva con ScrollSpy, menú móvil y toggle de tema
 │   │   ├── HeroSection.jsx       # Hero principal con CTA de descarga y mockup
-│   │   ├── ScreenshotsSection.jsx# Galería interactiva de capturas con Lightbox modal
-│   │   ├── FeaturesGrid.jsx      # Grid de 6 características principales
+│   │   ├── HeroFeatures.jsx      # Las 6 funciones HERO de la portada
+│   │   ├── DocsPage.jsx          # Página /documentacion
+│   │   ├── ThemedShot.jsx        # Captura que sigue el tema y se amplía al pulsarla
+│   │   ├── RichText.jsx          # Negrita, código y teclas en los textos de la documentación
 │   │   ├── DownloadSection.jsx   # Bloque final de descarga y requisitos de Windows
 │   │   ├── Footer.jsx            # Pie de página minimalista
 │   │   └── icons/
@@ -140,7 +129,8 @@ Brain_Board_Web/
 │   ├── context/
 │   │   └── ThemeContext.jsx      # Proveedor reactivo de tema (dark por defecto + localStorage)
 │   ├── data/
-│   │   └── content.js            # Datos de capturas, características, enlaces y versión actual
+│   │   ├── content.js            # Versión, enlaces, funciones HERO y changelog de respaldo
+│   │   └── docs.js               # Contenido de la documentación
 │   ├── App.jsx                   # Composición principal de la Landing Page
 │   ├── main.jsx                  # Punto de entrada de React
 │   └── index.css                 # Directivas de Tailwind + Variables CSS de GUIA_DISENO_WEB.md

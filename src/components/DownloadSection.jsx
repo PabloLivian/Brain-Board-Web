@@ -79,6 +79,16 @@ export function DownloadSection() {
                 </span>
               </div>
             )}
+
+            <p className="m-0 text-xs text-[var(--text-subtle)]">
+              ¿Windows te avisa al abrir el instalador?{' '}
+              <a
+                href="/documentacion#instalar"
+                className="text-[var(--primary)] font-semibold no-underline hover:underline"
+              >
+                Cómo instalarlo
+              </a>
+            </p>
           </div>
         </div>
 

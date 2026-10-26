@@ -1,4 +1,4 @@
-import { Sun, Moon, Download, Scale, UserCheck } from 'lucide-react';
+import { Sun, Moon, Download, Github, UserCheck } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useRelease } from '../context/ReleaseContext';
 import { BrainBoardLogo } from './icons/BrainBoardLogo';
@@ -16,7 +16,7 @@ export function Footer() {
           {/* Izquierda: Logotipo reducido y descripción */}
           <div className="space-y-2">
             <a
-              href="#inicio"
+              href="/#inicio"
               className="inline-flex items-center gap-2 text-[var(--text-main)] no-underline"
             >
               <BrainBoardLogo className="w-6 h-5 text-[var(--primary)]" />
@@ -26,8 +26,8 @@ export function Footer() {
               <span className="badge-version">{release.version}</span>
             </a>
             <p className="text-xs text-[var(--text-subtle)] max-w-md m-0">
-              Pizarra infinita de escritorio 100% local, privada y con sistema
-              integrado de copias de seguridad (.rtb).
+              Pizarra infinita de escritorio, local y offline, con copias
+              automáticas y paquetes de copia de seguridad (.rtb).
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export function Footer() {
             </button>
 
             <a
-              href="#descarga"
+              href="/#descarga"
               className="btn-primary !py-1.5 !px-3.5 !text-xs"
             >
               <Download className="w-3.5 h-3.5" />
@@ -75,7 +75,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bloque de Autoría (Pablo Livian) y Licencia MIT */}
+        {/* Bloque de Autoría (Pablo Livian) y código en GitHub */}
         <div className="mt-8 pt-8 border-t border-[var(--border-subtle)] grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Tarjeta de Autoría */}
           <div className="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-card)] flex items-start gap-3.5">
@@ -100,35 +100,26 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Tarjeta de Licencia MIT */}
-          <div className="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-card)] flex items-start gap-3.5">
+          {/* Tarjeta del repositorio en GitHub */}
+          <a
+            href={APP_INFO.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-card)] hover:border-[var(--primary)] flex items-start gap-3.5 no-underline transition-colors"
+          >
             <div className="w-9 h-9 rounded-lg bg-[var(--badge-bg)] text-[var(--primary)] flex items-center justify-center shrink-0 mt-0.5">
-              <Scale className="w-4 h-4" />
+              <Github className="w-4 h-4" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--text-main)] m-0">
-                  Licencia MIT
-                </h3>
-                <span className="badge-version !text-[10px] !py-0.5 !px-2">
-                  Open Source
-                </span>
-              </div>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--text-main)] m-0">
+                Código y versiones en GitHub
+              </h3>
               <p className="text-xs text-[var(--text-muted)] mt-1 leading-relaxed m-0">
-                Distribuido bajo la{' '}
-                <strong className="text-[var(--text-main)] font-semibold">
-                  Licencia MIT
-                </strong>
-                . Se concede permiso de forma gratuita para usar, copiar,
-                modificar y distribuir este software sin restricciones,
-                manteniendo siempre el aviso de copyright y autoría original de{' '}
-                <strong className="text-[var(--text-main)] font-semibold">
-                  Pablo Livian
-                </strong>
-                .
+                El código de la aplicación y todas las versiones publicadas
+                están en el repositorio público de GitHub.
               </p>
             </div>
-          </div>
+          </a>
         </div>
 
         {/* Línea final de copyright */}
@@ -137,11 +128,11 @@ export function Footer() {
             © {new Date().getFullYear()} {APP_INFO.name} — Creado por{' '}
             <strong className="text-[var(--text-main)] font-semibold">
               Pablo Livian
-            </strong>{' '}
-            bajo Licencia MIT.
+            </strong>
+            .
           </span>
           <span>
-            Diseñado para Windows 10/11 (64-bit) • Privacidad 100% Offline
+            Diseñado para Windows 10/11 (64-bit) • Tus tableros se guardan en tu equipo
           </span>
         </div>
       </div>
