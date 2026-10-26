@@ -10,12 +10,12 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.5',
-  installerName: 'Brain-Board-Setup-1.0.5.exe',
+  version: 'v1.0.6',
+  installerName: 'Brain-Board-Setup-1.0.6.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.5/Brain-Board-Setup-1.0.5.exe',
-  size: '82.6 MB',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.6/Brain-Board-Setup-1.0.6.exe',
+  size: '89.6 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
   githubUrl: 'https://github.com/PabloLivian/BrainBoard',
@@ -101,10 +101,10 @@ export const BASICS = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Nuevo Cerebro IA "Brain" (Ctrl+K): conversa con tus tableros y usa las acciones rápidas Apunte, Añadir recurso, Briefing y Revisar apuntes obsoletos.',
-  'Autodetección de IA: usa Claude Code CLI o Gemini CLI si están instalados, o tu API Key de Claude, Gemini u OpenAI, u Ollama en local.',
-  'Añadir recurso: guarda webs, repositorios de GitHub, vídeos o posts de X como tarjeta compacta con una mini descripción debajo.',
-  'Fecha de colocación en cada elemento y Mapa de Frescura para ver de un vistazo qué es reciente y qué conviene revisar.',
-  'Exporta el tablero como imagen PNG / JPG y selecciona un área para copiar sus coordenadas.',
-  'Tablero de Ejemplo renovado con una guía paso a paso para empezar.',
+  'Busca en todos tus tableros a la vez (Ctrl+Shift+F) y salta a cualquier sección con el nuevo índice.',
+  'El Cerebro IA te propone los cambios antes de tocar el tablero (Insertar, Descartar y Deshacer) y responde sobre lo que selecciones.',
+  'Puntúa con estrellas tus enlaces, recibe un aviso si ya tenías guardado uno y abre carpetas de tu PC desde el tablero.',
+  'Papelera de 30 días y una copia automática diaria de todos tus tableros.',
+  'Mapa de Frescura configurable, alinear y distribuir, plantillas de Galería y Comparativa, y capas más intuitivas.',
+  'Tablero de Ejemplo renovado: guía de todas las funciones y de cómo conseguir la clave gratis de Google Gemini.',
 ];
