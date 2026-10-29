@@ -42,13 +42,13 @@ function Icon({ name, size = 16 }) {
 const TOOLS = [
   { id: 'select', label: 'Seleccionar (V)' },
   { id: 'hand', label: 'Mano (H)' },
-  { id: 'note', label: 'Nota adhesiva (N)' },
-  { id: 'shape', label: 'Forma (S)', flyout: true },
+  { id: 'template', label: 'Plantillas', flyout: true },
   { id: 'text', label: 'Texto (T)' },
   { id: 'connector', label: 'Conector (L)' },
-  { id: 'pen', label: 'Lápiz (P)' },
+  { id: 'pen', label: 'Pluma (P)', flyout: true },
   { id: 'frame', label: 'Marco (F)' },
-  { id: 'template', label: 'Plantillas', flyout: true },
+  { id: 'note', label: 'Nota adhesiva (N)' },
+  { id: 'shape', label: 'Forma (S)', flyout: true },
   { id: 'comment', label: 'Comentario (C)' },
 ];
 

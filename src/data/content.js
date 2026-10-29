@@ -10,11 +10,11 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.6',
-  installerName: 'Brain-Board-Setup-1.0.6.exe',
+  version: 'v1.0.7',
+  installerName: 'Brain-Board-Setup-1.0.7.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.6/Brain-Board-Setup-1.0.6.exe',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.7/Brain-Board-Setup-1.0.7.exe',
   size: '89.6 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
@@ -101,10 +101,10 @@ export const BASICS = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Busca en todos tus tableros a la vez (Ctrl+Shift+F) y salta a cualquier sección con el nuevo índice.',
-  'El Cerebro IA te propone los cambios antes de tocar el tablero (Insertar, Descartar y Deshacer) y responde sobre lo que selecciones.',
-  'Puntúa con estrellas tus enlaces, recibe un aviso si ya tenías guardado uno y abre carpetas de tu PC desde el tablero.',
-  'Papelera de 30 días y una copia automática diaria de todos tus tableros.',
-  'Mapa de Frescura configurable, alinear y distribuir, plantillas de Galería y Comparativa, y capas más intuitivas.',
-  'Tablero de Ejemplo renovado: guía de todas las funciones y de cómo conseguir la clave gratis de Google Gemini.',
+  'Nueva plantilla Recursos: ordena enlaces, vídeos e imágenes por fecha o por estrellas, y une una imagen a cada enlace para que vayan juntos.',
+  'Contenedores más listos: el título se ajusta al tamaño, la etiqueta enseña el título y el índice de secciones muestra los marcos anidados en árbol.',
+  'Nuevo texto desplegable (spoiler) que se abre con un clic y se copia con un botón.',
+  'La pluma vuelve a funcionar, ahora con grosor y color a elegir entre tus favoritos.',
+  'Los colores que eliges se ven igual en el tema oscuro y en el claro, con la nueva opción Sin color para quitar el relleno.',
+  'Barra de herramientas reordenada y nueva plantilla Título para índice.',
 ];
