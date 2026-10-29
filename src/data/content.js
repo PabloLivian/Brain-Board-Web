@@ -10,11 +10,11 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.7',
-  installerName: 'Brain-Board-Setup-1.0.7.exe',
+  version: 'v1.0.8',
+  installerName: 'Brain-Board-Setup-1.0.8.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.7/Brain-Board-Setup-1.0.7.exe',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.8/Brain-Board-Setup-1.0.8.exe',
   size: '89.6 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
@@ -101,10 +101,8 @@ export const BASICS = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Nueva plantilla Recursos: ordena enlaces, vídeos e imágenes por fecha o por estrellas, y une una imagen a cada enlace para que vayan juntos.',
-  'Contenedores más listos: el título se ajusta al tamaño, la etiqueta enseña el título y el índice de secciones muestra los marcos anidados en árbol.',
-  'Nuevo texto desplegable (spoiler) que se abre con un clic y se copia con un botón.',
-  'La pluma vuelve a funcionar, ahora con grosor y color a elegir entre tus favoritos.',
-  'Los colores que eliges se ven igual en el tema oscuro y en el claro, con la nueva opción Sin color para quitar el relleno.',
-  'Barra de herramientas reordenada y nueva plantilla Título para índice.',
+  'Une lo que quieras: selecciona dos o más elementos (enlaces, textos, imágenes, notas, formas…) y pulsa Unir.',
+  'Lo unido se mueve, se copia, se duplica con Alt y se ordena en la plantilla Recursos como una sola pieza.',
+  'Cada elemento unido lleva una marca de cadena y, al seleccionar uno, un contorno rodea todo el grupo.',
+  'Separar saca del grupo lo seleccionado; las imágenes que uniste a un enlace con la 1.0.7 pasan solas a ser un grupo.',
 ];
