@@ -10,11 +10,11 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.9',
-  installerName: 'Brain-Board-Setup-1.0.9.exe',
+  version: 'v1.0.10',
+  installerName: 'Brain-Board-Setup-1.0.10.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.9/Brain-Board-Setup-1.0.9.exe',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.10/Brain-Board-Setup-1.0.10.exe',
   size: '92.8 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
@@ -101,10 +101,9 @@ export const BASICS = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Navegación fluida: arrastrar y hacer zoom sin tirones aunque haya cientos de imágenes, tableros grandes que se abren al momento y guardado que ya no congela la ventana.',
-  'Datos más seguros: cambiar rápido de pestaña ya no vacía un tablero, cerrar la app justo después de un cambio ya no lo pierde e importar un tablero que ya tienes pregunta antes.',
-  'Historial de versiones en el menú ⋮ de cada tablero, para restaurar o abrir como copia; «Limpiar tablero» ya se puede recuperar.',
-  'Las imágenes pegadas se guardan como archivos: los tableros pesan mucho menos y las copias automáticas las incluyen.',
-  'Filtro por estrellas, lista de enlaces repetidos en todos los tableros y comprobación de enlaces rotos en el Mapa de Frescura.',
-  'Micrófono en el Cerebro (la voz se transcribe en tu ordenador), resumen IA de tarjetas y crear arrastrando con todas las herramientas.',
+  'Tableros de equipo: al crear un tablero, elige «Trabajar en equipo» para editarlo con otra persona, cada una desde su casa.',
+  'Se sincroniza por una carpeta compartida de Google Drive para escritorio: gratis, sin cuentas y sin servidores.',
+  'Los cambios de cada uno llegan al otro en unos segundos, con aviso de quién ha cambiado qué; las imágenes viajan con el tablero.',
+  '«Nuevo tablero → Unirme a un tablero de equipo» abre la carpeta que te han compartido; el indicador «Equipo» muestra los miembros y si la carpeta está accesible.',
+  'Los tableros personales siguen guardándose solo en tu ordenador, como siempre.',
 ];

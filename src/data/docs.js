@@ -7,6 +7,7 @@ import {
   Brain,
   ShieldCheck,
   Keyboard,
+  Users,
 } from 'lucide-react';
 
 // Contenido de /documentacion.
@@ -217,6 +218,33 @@ export const DOCS_SECTIONS = [
         '**Exportar tablero (.rtb)**: un tablero con sus imágenes, para guardarlo o pasárselo a otro ordenador.',
         '**Exportar imagen (PNG / JPG)**: el tablero como imagen de alta resolución.',
         '**Importar (.rtb)** en Inicio: abre un paquete `.rtb`, `.brainboard` o `.json`. Si ya tienes ese tablero, te pregunta si **reemplazarlo** (el tuyo queda 30 días en la papelera) o **importarlo como copia**.',
+      ] },
+    ],
+  },
+  {
+    id: 'equipo',
+    title: 'Trabajar en equipo',
+    icon: Users,
+    blocks: [
+      { type: 'p', text: 'Un tablero de equipo lo editáis varias personas, cada una desde su casa y su ordenador. Se sincroniza por una carpeta compartida de **Google Drive**: no hace falta cuenta en Brain Board ni ningún servidor, y es gratis. Tus tableros personales no cambian: siguen guardándose solo en tu ordenador.' },
+      { type: 'note', tone: 'info', text: 'Necesitáis **Google Drive para escritorio** (gratis) en los dos ordenadores: es el programa que mantiene la carpeta igual en los dos.' },
+      { type: 'h3', text: 'Crear un tablero de equipo' },
+      { type: 'steps', items: [
+        'Pulsa **Nuevo tablero**, ponle nombre y elige **Trabajar en equipo**. Escribe tu nombre: es el que verá tu compañero.',
+        'Elige dónde crear su carpeta, dentro de **Mi unidad** de Google Drive.',
+        'En Google Drive, comparte esa carpeta con tu compañero con permiso de **Editor**.',
+      ] },
+      { type: 'h3', text: 'Unirse a un tablero de equipo' },
+      { type: 'steps', items: [
+        'En drive.google.com, en **Compartido conmigo**, haz clic derecho en la carpeta → **Organizar → Añadir acceso directo** a «Mi unidad».',
+        'En Brain Board: **Nuevo tablero → Unirme a un tablero de equipo** y elige esa carpeta.',
+      ] },
+      { type: 'h3', text: 'Mientras trabajáis' },
+      { type: 'list', items: [
+        'Los cambios de cada uno le llegan al otro en unos segundos (lo que tarde Google Drive en subirlos y bajarlos), con un aviso de quién ha cambiado qué. Las imágenes viajan con el tablero.',
+        'Si los dos cambiáis cosas distintas a la vez, se conserva todo. Si tocáis la misma nota a la vez, se queda el último cambio.',
+        'La etiqueta **Equipo**, junto a «Guardado», muestra quién está en el tablero y avisa si no encuentra la carpeta (por ejemplo, con Google Drive cerrado). Al pulsarla puedes abrir la carpeta o sincronizar al momento.',
+        'El tablero también se guarda en tu ordenador: si no hay conexión puedes seguir trabajando, y se pone al día cuando vuelva.',
       ] },
     ],
   },
