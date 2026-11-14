@@ -10,12 +10,12 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.8',
-  installerName: 'Brain-Board-Setup-1.0.8.exe',
+  version: 'v1.0.9',
+  installerName: 'Brain-Board-Setup-1.0.9.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.8/Brain-Board-Setup-1.0.8.exe',
-  size: '89.6 MB',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.9/Brain-Board-Setup-1.0.9.exe',
+  size: '92.8 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
   githubUrl: 'https://github.com/PabloLivian/BrainBoard',
@@ -101,8 +101,10 @@ export const BASICS = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Une lo que quieras: selecciona dos o más elementos (enlaces, textos, imágenes, notas, formas…) y pulsa Unir.',
-  'Lo unido se mueve, se copia, se duplica con Alt y se ordena en la plantilla Recursos como una sola pieza.',
-  'Cada elemento unido lleva una marca de cadena y, al seleccionar uno, un contorno rodea todo el grupo.',
-  'Separar saca del grupo lo seleccionado; las imágenes que uniste a un enlace con la 1.0.7 pasan solas a ser un grupo.',
+  'Navegación fluida: arrastrar y hacer zoom sin tirones aunque haya cientos de imágenes, tableros grandes que se abren al momento y guardado que ya no congela la ventana.',
+  'Datos más seguros: cambiar rápido de pestaña ya no vacía un tablero, cerrar la app justo después de un cambio ya no lo pierde e importar un tablero que ya tienes pregunta antes.',
+  'Historial de versiones en el menú ⋮ de cada tablero, para restaurar o abrir como copia; «Limpiar tablero» ya se puede recuperar.',
+  'Las imágenes pegadas se guardan como archivos: los tableros pesan mucho menos y las copias automáticas las incluyen.',
+  'Filtro por estrellas, lista de enlaces repetidos en todos los tableros y comprobación de enlaces rotos en el Mapa de Frescura.',
+  'Micrófono en el Cerebro (la voz se transcribe en tu ordenador), resumen IA de tarjetas y crear arrastrando con todas las herramientas.',
 ];
