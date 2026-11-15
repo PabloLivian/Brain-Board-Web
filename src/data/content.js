@@ -10,11 +10,11 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.10',
-  installerName: 'Brain-Board-Setup-1.0.10.exe',
+  version: 'v1.0.11',
+  installerName: 'Brain-Board-Setup-1.0.11.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.10/Brain-Board-Setup-1.0.10.exe',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.11/Brain-Board-Setup-1.0.11.exe',
   size: '92.8 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
@@ -101,9 +101,8 @@ export const BASICS = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Tableros de equipo: al crear un tablero, elige «Trabajar en equipo» para editarlo con otra persona, cada una desde su casa.',
-  'Se sincroniza por una carpeta compartida de Google Drive para escritorio: gratis, sin cuentas y sin servidores.',
-  'Los cambios de cada uno llegan al otro en unos segundos, con aviso de quién ha cambiado qué; las imágenes viajan con el tablero.',
-  '«Nuevo tablero → Unirme a un tablero de equipo» abre la carpeta que te han compartido; el indicador «Equipo» muestra los miembros y si la carpeta está accesible.',
-  'Los tableros personales siguen guardándose solo en tu ordenador, como siempre.',
+  'Los avisos de actualización salen ahora en una ventana de Brain Board, con su estilo y en modo claro u oscuro.',
+  'Las novedades de cada versión se ven como lista, con los botones «Actualizar ahora» y «Más tarde».',
+  'Antes de reiniciar para instalar una versión, se guardan todos tus tableros (también los de equipo).',
+  'El aviso nuevo se verá a partir de la próxima actualización: esta todavía sale con la ventana de Windows.',
 ];
