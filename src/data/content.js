@@ -10,11 +10,11 @@ import {
 export const APP_INFO = {
   name: 'Brain Board',
   author: 'Pablo Livian',
-  version: 'v1.0.11',
-  installerName: 'Brain-Board-Setup-1.0.11.exe',
+  version: 'v1.0.13',
+  installerName: 'Brain-Board-Setup-1.0.13.exe',
   installerUrl: '#descarga',
   directDownloadFile:
-    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.11/Brain-Board-Setup-1.0.11.exe',
+    'https://github.com/PabloLivian/BrainBoard/releases/download/v1.0.13/Brain-Board-Setup-1.0.13.exe',
   size: '92.8 MB',
   os: 'Windows 10 / 11 (64-bit)',
   architecture: 'x64 Nativo',
@@ -101,8 +101,8 @@ export const BASICS = [
 ];
 
 export const CHANGELOG_LATEST = [
-  'Los avisos de actualización salen ahora en una ventana de Brain Board, con su estilo y en modo claro u oscuro.',
-  'Las novedades de cada versión se ven como lista, con los botones «Actualizar ahora» y «Más tarde».',
-  'Antes de reiniciar para instalar una versión, se guardan todos tus tableros (también los de equipo).',
-  'El aviso nuevo se verá a partir de la próxima actualización: esta todavía sale con la ventana de Windows.',
+  'Al soltar un marco o una plantilla dentro de otro marco, queda delante del contenedor y no detrás.',
+  'Arrastrar un marco metido en otro ya no se lleva el contenedor entero.',
+  'La plantilla Workflow sale con su fondo oscuro, la cabecera clara y el texto claro, igual en modo claro y oscuro.',
+  'El contenido de un marco soltado dentro de otro queda siempre por encima de su marco.',
 ];

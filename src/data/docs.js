@@ -54,9 +54,9 @@ export const DOCS_SECTIONS = [
       { type: 'p', text: 'Bloques ya maquetados para no empezar de cero. Elige una en el menú del botón de plantillas y haz clic en el tablero, o arrastra para darle el tamaño que quieras (los márgenes y el título se quedan como en la plantilla):' },
       { type: 'list', items: [
         '**Apuntes**: un marco con un título grande y una nota. El título se ajusta al ancho del marco cuando lo cambias de tamaño.',
+        '**Workflow**: un marco con el nombre del workflow (sale en el índice) y una ficha para rellenar con su utilidad, los modelos que usa (modelo, lora, text encoder, controlnets, VAE, clip vision) y las claves.',
         '**Recurso + apunte**: una tarjeta de enlace con su nota técnica al lado.',
         '**Recursos**: un marco para guardar enlaces, vídeos e imágenes y ordenarlos por fecha o por estrellas (ver Enlaces y recursos).',
-        '**Galería de referencias**: 6 huecos donde pegar o arrastrar imágenes.',
         '**Texto desplegable**: un texto que se abre y se cierra con un clic en su cabecera, con un botón para copiarlo entero. Ideal para prompts largos.',
         '**Título para índice**: un título que aparece en el índice de secciones.',
       ] },
@@ -217,6 +217,7 @@ export const DOCS_SECTIONS = [
         '**Copia de seguridad (.rtb)** en Inicio: todos tus tableros con sus imágenes en un solo paquete.',
         '**Exportar tablero (.rtb)**: un tablero con sus imágenes, para guardarlo o pasárselo a otro ordenador.',
         '**Exportar imagen (PNG / JPG)**: el tablero como imagen de alta resolución.',
+        '**Exportar para Claude (JSON)**, en el menú ⋮ del tablero: elige secciones (o todo el tablero) y se guardan en **Documentos › BrainBoard › Para Claude** con sus enlaces, descripciones, estrellas, apuntes y fechas. Súbelo a un Project de Claude o deja que Claude lo lea desde tu ordenador. Con **Mantenerlo al día** se reescribe cada vez que guardas el tablero.',
         '**Importar (.rtb)** en Inicio: abre un paquete `.rtb`, `.brainboard` o `.json`. Si ya tienes ese tablero, te pregunta si **reemplazarlo** (el tuyo queda 30 días en la papelera) o **importarlo como copia**.',
       ] },
     ],
