@@ -22,13 +22,15 @@ export function HeroFeatures() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {HERO_FEATURES.map((feature) => {
           const Icon = feature.icon;
+          // Tarjeta ancha: las dos columnas, con la captura entera a un lado y el texto al otro
+          const wide = Boolean(feature.wide);
           return (
             <article
               key={feature.id}
-              className="flex flex-col rounded-[var(--radius-xl)] bg-[var(--bg-surface)] border border-[var(--border-card)] p-3 sm:p-4 shadow-[var(--shadow-sm)]"
+              className={`flex flex-col rounded-[var(--radius-xl)] bg-[var(--bg-surface)] border border-[var(--border-card)] p-3 sm:p-4 shadow-[var(--shadow-sm)] ${wide ? 'md:col-span-2 lg:flex-row lg:items-center lg:gap-4' : ''}`}
             >
-              <ThemedShot id={feature.shot} alt={feature.title} crop />
-              <div className="px-2 pt-5 pb-2 flex flex-col gap-2 flex-1">
+              <ThemedShot id={feature.shot} alt={feature.title} crop={!wide} className={wide ? 'lg:w-[62%] lg:shrink-0' : ''} />
+              <div className={`px-2 pt-5 pb-2 flex flex-col gap-2 flex-1 ${wide ? 'lg:pt-2 lg:pr-4' : ''}`}>
                 <div className="flex items-center gap-2.5">
                   <span className="feature-card-icon !w-9 !h-9 !mb-0">
                     <Icon className="w-[18px] h-[18px]" />

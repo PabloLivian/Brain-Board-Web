@@ -5,6 +5,7 @@ import {
   Search,
   ShieldCheck,
   FolderOpen,
+  Users,
 } from 'lucide-react';
 
 export const APP_INFO = {
@@ -85,6 +86,17 @@ export const HERO_FEATURES = [
     description:
       'Pega la ruta de una carpeta o un archivo del ordenador y ábrelo desde la pizarra, junto a tus referencias.',
     docs: 'enlaces',
+  },
+  // Tarjeta ancha (ocupa las dos columnas) con la captura entera
+  {
+    id: 'equipo',
+    shot: 'equipo',
+    icon: Users,
+    wide: true,
+    title: 'Trabajad en equipo',
+    description:
+      'Comparte un tablero con otra persona mediante una carpeta compartida de Google Drive o de OneDrive. Cada uno lo edita desde su casa y su ordenador, y los cambios llegan en unos segundos con aviso de quién ha cambiado qué. Sin cuentas ni servidores: tus tableros personales siguen siendo solo tuyos.',
+    docs: 'equipo',
   },
 ];
 
